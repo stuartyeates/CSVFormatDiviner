@@ -29,16 +29,15 @@ public class CSVFormatDiviner {
     		formats2.add(formats.elementAt(i).withAllowMissingColumnNames(true));
     		formats2.add(formats.elementAt(i).withAllowMissingColumnNames(false));
     	}
-    	
-    
-    	return formats.toArray(new CSVFormat[0]);
+    	return formats2.toArray(new CSVFormat[0]);
     }
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new CSVFormatDiviner().getAllFormats("|,.;:'!");
+		CSVFormat[] f = new CSVFormatDiviner().getAllFormats("|,.;:'!");
+		System.out.println(f.length);
 	}
 
 }
